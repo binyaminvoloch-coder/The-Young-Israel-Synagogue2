@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>זמני תפילות | ישראל הצעיר</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* עיצוב ספציפי לדף זה */
+        .pdf-wrapper { background: white; max-width: 850px; margin: 0 auto; border-radius: 0.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4); overflow: hidden; height: 600px; }
+        .widget-container { background: white; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3); overflow: hidden; display: inline-block; transform: scale(1.1); margin: 20px 0; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+    <!-- Navbar (Same as index) -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 text-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 no-underline text-slate-900">
+                    <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-[#D4AF37]">
+                        <i data-lucide="star" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl serif leading-none">ישראל הצעיר</h1>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-4 text-sm font-medium">
+                    <a href="index.html" class="nav-link">חזרה לדף הבית</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="index.html" class="text-gray-600"><i data-lucide="home" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-12 px-4 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-[#D4AF37] mb-6 shadow-lg">
+            <i data-lucide="clock" class="w-4 h-4"></i>
+            <span class="text-sm font-bold tracking-widest uppercase">לוח זמנים שבועי</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 serif">זמני תפילות ושיעורים</h1>
+        
+        <!-- PDF Section -->
+        <section class="w-full mb-16 mt-8">
+            <div class="pdf-wrapper">
+                <iframe id="pdf-viewer" src="https://drive.google.com/file/d/1xSKhNrApxPppHFj32XRNbdy2obfYeca_/preview" width="100%" height="100%" style="border: none;" title="זמני תפילות PDF"></iframe>
+            </div>
+            <div class="mt-8">
+                 <a href="https://drive.google.com/file/d/1xSKhNrApxPppHFj32XRNbdy2obfYeca_/view?usp=sharing" target="_blank" class="btn-gold">
+                    <i data-lucide="download" class="w-5 h-5"></i> הורדת הלוח (PDF)
+                </a>
+            </div>
+        </section>
+
+        <!-- Widget Section -->
+        <section class="max-w-4xl mx-auto border-t border-white/10 pt-12">
+            <h2 class="text-3xl font-bold serif text-[#D4AF37] mb-6">זמני היום (אופק פ"ת)</h2>
+            <div class="flex justify-center">
+                <div class="widget-container bg-white p-2">
+                    <iframe src="https://www.yeshiva.org.il/generalpages/yeshivatimes?bgcolor=ffffff&place=181" width="280" height="340" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            <p class="text-sm mt-8 opacity-60">הזמנים באדיבות אתר ישיבה</p>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 border-t border-white/10 text-white/50 text-sm">
+        <p>© כל הזכויות שמורות - בית הכנסת ישראל הצעיר</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
